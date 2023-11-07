@@ -27,88 +27,91 @@ Step 7: Save and run the application.
 
 ## PROGRAM:
 ```
-*
-Program to print the text “Hello World”. 
-Developed by: Lathish kumar.B
-Registeration Number : 212221040087 
-*/
-MainActivity.java:
-package com.example.helloworld;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
-public class MainActivity extends AppCompatActivity { 
-private static final String TAG = "HelloWorldActivity"; 
-@Override
-protected void onCreate(Bundle savedInstanceState) { 
-super.onCreate(savedInstanceState);
-setContentView(R.layout.activity_main); 
-Log.d(TAG, "onCreate: ");
-Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show(); 
-}
-@Override
-protected void onStart() { 
-super.onStart();
-Log.d(TAG, "onStart: ");
-Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show(); 
-}
-@Override
-protected void onResume() { 
-super.onResume();
-Log.d(TAG, "onResume: ");
-Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show(); 
-}
-@Override
-protected void onPause() { 
-super.onPause();
-Log.d(TAG, "onPause: ");
-Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show(); 
-}
-@Override
-protected void onStop() { 
-super.onStop();
-Log.d(TAG, "onStop: ");
-Toast.makeText(this, "onStop", Toast.LENGTH_SHORT).show(); 
-}
-@Override
-protected void onDestroy() { 
-super.onDestroy();
-Log.d(TAG, "onDestroy: ");
-Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT).show(); 
-}
-@Override
-protected void onRestart() { 
-super.onRestart();
-Log.d(TAG, "onRestart: ");
-Toast.makeText(this, "onRestart", Toast.LENGTH_SHORT).show(); 
-}
-}Activity_main.xml:
+Developed by: Lathish kumar B 
+Reg.no:212221040087
+```
+## activity_main.xml
+```
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools" 
-android:layout_width="match_parent"
-android:layout_height="match_parent" 
-tools:context=".MainActivity">
-<TextView
-android:layout_width="238dp"
-android:layout_height="105dp"
-android:text="Hello World!"
-android:textSize="100px"
-android:textStyle="italic"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintHorizontal_bias="0.591"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="0.499" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="TIM"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World\nThis is Hiba...!!"
+        android:textSize="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
-## OUTPUT
-![267234333-1196a666-a474-4c1f-a5b4-b7450513d966 1](https://github.com/Lathishkum/exp1/assets/144109092/06ebfb51-8385-4d47-b829-68d165a27614)
+## MainActivity.java
+```
+package com.example.hiba;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast t2= Toast.makeText(getApplicationContext(),"OnCreate Executed",Toast.LENGTH_LONG);
+        t2.show();
+    }
+    protected void onStart() {
+        super.onStart();
+        setContentView(R.layout.activity_main);
+        Toast t2= Toast.makeText(getApplicationContext(),"OnStart Executed",Toast.LENGTH_LONG);
+        t2.show();
+    }
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.activity_main);
+        Toast t2= Toast.makeText(getApplicationContext(),"OnResume Executed",Toast.LENGTH_LONG);
+        t2.show();
+    }
+    protected void onPause() {
+        super.onPause();
+        setContentView(R.layout.activity_main);
+        Toast t2= Toast.makeText(getApplicationContext(),"OnPause Executed",Toast.LENGTH_LONG);
+        t2.show();
+    }
+    protected void onRestart() {
+        super.onRestart();
+        setContentView(R.layout.activity_main);
+        Toast t2= Toast.makeText(getApplicationContext(),"OnRestart Executed",Toast.LENGTH_LONG);
+        t2.show();
+    }
+    protected void onDestroy() {
+        super.onDestroy();
+        setContentView(R.layout.activity_main);
+        Toast t2= Toast.makeText(getApplicationContext(),"OnDestroy Executed",Toast.LENGTH_LONG);
+        t2.show();
+    }
+}
+```
+
+## OUTPUT
+
+![image](https://github.com/JaganSivakumaran/Experiment-1/assets/134905062/1c47447a-9a70-4e51-9099-8c3e959515a5)
+![image](https://github.com/JaganSivakumaran/Experiment-1/assets/134905062/6abd7bc5-7965-4920-afb7-bdd9a8619542)
 
 
 
